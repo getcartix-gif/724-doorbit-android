@@ -2,7 +2,12 @@ plugins { id 'com.android.application' }
 android {
  namespace 'com.doorbit.app'
  compileSdk 35
- defaultConfig { applicationId 'com.doorbit.app'; minSdk 26; targetSdk 35; versionCode 3; versionName '1.0.2' }
+ defaultConfig { applicationId 'com.doorbit.app'; minSdk 26; targetSdk 35; versionCode 4; versionName '1.1.0' }
  buildTypes { debug { minifyEnabled false } }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+ implementation platform('com.google.firebase:firebase-bom:33.7.0')
+ implementation 'com.google.firebase:firebase-messaging'
+ implementation 'androidx.core:core:1.15.0'
 }
